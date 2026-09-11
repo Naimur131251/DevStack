@@ -1,3 +1,4 @@
+import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 
 const App = () => {
@@ -5,6 +6,7 @@ const App = () => {
   return (
     <>
       <Nav />
+      <Hero />
     </>
   );
 };
