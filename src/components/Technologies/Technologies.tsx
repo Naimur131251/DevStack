@@ -1,5 +1,6 @@
 import { use } from "react";
 import type { ITechnologyCard } from "../../types/technologyCard";
+import AvailableTech from "./AvailableTech";
 
 interface ITechnologies {
   techPromise: Promise<ITechnologyCard[]>;
@@ -9,7 +10,7 @@ interface ITechnologies {
 const Technologies = ({ techPromise }: ITechnologies) => {
   const technologies = use(techPromise);
 
-  console.log(technologies);
+  // console.log(technologies);
   
 
   return (
@@ -25,6 +26,8 @@ const Technologies = ({ techPromise }: ITechnologies) => {
           Pick one technology per category to build your ideal stack.
         </p>
       </div>
+
+      <AvailableTech technologies = {technologies} />
     </div>
   );
 };
