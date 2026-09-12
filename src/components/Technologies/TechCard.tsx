@@ -1,11 +1,36 @@
+import { type Dispatch, type SetStateAction } from "react";
 import type { ITechnologyCard } from "../../types/technologyCard";
+import { Bounce, toast } from "react-toastify";
 
-interface ITechCard{
-    tech: ITechnologyCard
+interface ITechCard {
+  tech: ITechnologyCard;
+  isAdded: ITechnologyCard[];
+  setIsAdded: Dispatch<SetStateAction<ITechnologyCard[]>>;
 }
 
-const TechCard = ({ tech }: ITechCard) => {
-const badgeColoring = (badge: string) => {
+const TechCard = ({ tech, isAdded, setIsAdded }: ITechCard) => {
+  const isSelected = isAdded.some((item) => item.name === tech.name);
+  const handleAddToStack = () => {
+    if (isSelected) return;
+
+    setIsAdded([...isAdded, tech]);
+
+    if (isSelected === false) {
+      toast.success(`${tech.name} added`, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    }
+  };
+
+  const badgeColoring = (badge: string) => {
     switch (badge) {
       case "Popular":
         return "bg-[#F0F9FF] text-[#0EA5E9] border-[#E0F2FE]";
@@ -15,7 +40,7 @@ const badgeColoring = (badge: string) => {
 
       case "Fast":
         return "bg-[#FFF7ED] text-[#EA580C] border-[#FFEDD5]";
- 
+
       case "Standard":
         return "bg-[#ECFDF5] text-[#059669] border-[#D1FAE5]";
 
@@ -33,7 +58,7 @@ const badgeColoring = (badge: string) => {
 
       case "Robust":
         return "bg-[#F0F9FF] text-[#0284C7] border-[#E0F2FE]";
-        
+
       case "Modern":
         return "bg-[#ECFEFF] text-[#0891B2] border-[#CFFAFE]";
 
@@ -86,8 +111,16 @@ const badgeColoring = (badge: string) => {
 
       {/* Button */}
       <div className="mt-4">
-        <button className="btn btn-neutral btn-sm w-full bg-[#0A0F1D] py-2.5 text-white font-medium text-xs rounded-2">
-          Add to Stack
+        <button
+          onClick={handleAddToStack}
+          className={`btn btn-sm w-full py-2.5 text-xs font-medium rounded-lg ${
+            isSelected
+              ? "bg-gray-300 text-black/50 cursor-not-allowed"
+              : "bg-[#0A0F1D] text-white"
+          }`}
+          disabled={isSelected}
+        >
+          {isSelected ? "✔ Added to Stack" : "Add to Stack"}
         </button>
       </div>
     </div>
