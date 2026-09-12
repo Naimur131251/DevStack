@@ -11,7 +11,7 @@ const AvailableTech = ({ technologies }: IAvailableTech) => {
   const [isAdded, setIsAdded] = useState<ITechnologyCard[]>([]);
 
   return (
-    <div className="grid grid-cols-12 gap-5 mb-12">
+    <div className="grid grid-cols-12 gap-5 mb-15">
       <div className="col-span-9 grid grid-cols-3 gap-5">
         {technologies.map((tech) => {
           return (

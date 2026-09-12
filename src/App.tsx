@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 import Technologies from "./components/Technologies/Technologies";
 import type { ITechnologyCard } from "./types/technologyCard";
+import Footer from "./components/footer";
 
 const TechnologiesFetch = async (): Promise<ITechnologyCard[]> => {
   const res = await fetch("/data.json");
@@ -23,6 +24,8 @@ function App ()  {
           techPromise = {techPromise}
         />
       </Suspense>
+
+      <Footer />
     </>
   );
 };
