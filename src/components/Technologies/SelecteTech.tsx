@@ -29,6 +29,9 @@ const SelecteTech = ({ isAdded, setIsAdded }: ISelecteTech) => {
       transition: Bounce,
     });
   };
+  const handleRemoveAll = () => {
+    setIsAdded([]);
+  };
 
   if (isAdded.length === 0) {
     return (
@@ -59,7 +62,7 @@ const SelecteTech = ({ isAdded, setIsAdded }: ISelecteTech) => {
 
         {/* Subtitle */}
         <p className="mt-1 text-xs text-[#94A3B8]">
-          No technologies selected yet.
+          {isAdded.length} Technology Selected
         </p>
 
         {/* Empty State */}
@@ -90,6 +93,13 @@ const SelecteTech = ({ isAdded, setIsAdded }: ISelecteTech) => {
             </div>
           );
         })}
+
+        <button
+          className="border border-[#ED8C85] rounded-lg w-full text-[#D82C20] font-semibold font-inter text-[14px] h-7.5 mt-11 cursor-pointer"
+          onClick={handleRemoveAll}
+        >
+          Remove All
+        </button>
       </div>
     </div>
   );
