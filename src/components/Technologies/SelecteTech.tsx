@@ -30,6 +30,17 @@ const SelecteTech = ({ isAdded, setIsAdded }: ISelecteTech) => {
     });
   };
   const handleRemoveAll = () => {
+    toast.warn('Remove all technologies', {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
     setIsAdded([]);
   };
 
