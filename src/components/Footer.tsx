@@ -11,7 +11,7 @@ const Footer = () => {
           <img
             src={LogoText}
             alt="Dev Stack"
-            className="w-28 md:w-30"
+            className="w-28 md:w-30 cursor-pointer"
           />
 
           <p className="text-xs md:text-sm leading-6 text-[#64748B] max-w-md">
@@ -20,15 +20,15 @@ const Footer = () => {
           </p>
 
           <div className="mt-5 md:mt-6 flex items-center gap-2 md:gap-3 mb-2">
-            <button className="text-xs md:text-sm text-[#475569]">
+            <button className="text-xs md:text-sm text-[#475569] cursor-pointer">
               GitHub
             </button>
             <BsDot />
-            <button className="text-xs md:text-sm text-[#475569]">
+            <button className="text-xs md:text-sm text-[#475569] cursor-pointer">
               Twitter
             </button>
             <BsDot />
-            <button className="text-xs md:text-sm text-[#475569]">
+            <button className="text-xs md:text-sm text-[#475569] cursor-pointer">
               LinkedIn
             </button>
           </div>
@@ -41,8 +41,8 @@ const Footer = () => {
             </p>
 
             <div className="flex items-center justify-center gap-3 md:gap-5 text-xs md:text-sm text-[#9CA3AF]">
-              <span>Privacy</span>
-              <span>Terms</span>
+              <span className="cursor-pointer">Privacy</span>
+              <span className="cursor-pointer">Terms</span>
             </div>
 
           </div>
@@ -61,7 +61,7 @@ const Footer = () => {
               <img
                 src={LogoText}
                 alt="Dev Stack"
-                className="w-30"
+                className="w-30 cursor-pointer"
               />
 
               <p className="max-w-md text-xs leading-6 text-[#64748B]">
@@ -71,15 +71,15 @@ const Footer = () => {
               </p>
 
               <div className="mt-6 flex items-center gap-5">
-                <button className="text-xs font-semibold text-[#475569]">
+                <button className="text-xs font-semibold text-[#475569] cursor-pointer">
                   GitHub
                 </button>
 
-                <button className="text-xs font-semibold text-[#475569]">
+                <button className="text-xs font-semibold text-[#475569] cursor-pointer">
                   Twitter
                 </button>
 
-                <button className="text-xs font-semibold text-[#475569]">
+                <button className="text-xs font-semibold text-[#475569] cursor-pointer">
                   LinkedIn
                 </button>
               </div>
@@ -93,9 +93,9 @@ const Footer = () => {
               </h2>
 
               <ul className="space-y-3 text-xs text-[#64748B]">
-                <li>Home</li>
-                <li>Technologies</li>
-                <li>Projects</li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Technologies</a></li>
+                <li><a href="">Projects</a></li>
               </ul>
             </div>
 
@@ -106,9 +106,9 @@ const Footer = () => {
               </h2>
 
               <ul className="space-y-3 text-xs text-[#64748B]">
-                <li>About</li>
-                <li>Contact</li>
-                <li>Careers</li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Careers</a></li>
               </ul>
             </div>
 
@@ -119,8 +119,8 @@ const Footer = () => {
               </h2>
 
               <ul className="space-y-3 text-xs text-[#64748B]">
-                <li>Privacy Policy</li>
-                <li>Terms of Services</li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms of Services</a></li>
               </ul>
             </div>
 
@@ -134,8 +134,8 @@ const Footer = () => {
             </p>
 
             <div className="flex items-center gap-6 text-xs text-[#94A3B8]">
-              <span>Privacy</span>
-              <span>Terms</span>
+              <span className="cursor-pointer">Privacy</span>
+              <span className="cursor-pointer">Terms</span>
             </div>
 
           </div>

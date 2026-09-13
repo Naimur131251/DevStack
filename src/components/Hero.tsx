@@ -73,6 +73,7 @@ const Hero = () => {
                 w-44
                 md:w-52
                 md:py-3.5
+                cursor-pointer
               "
             >
               Explore Technologies
@@ -90,6 +91,7 @@ const Hero = () => {
                 md:py-3.5
                 text-[#374151]
                 font-normal
+                cursor-pointer
               "
             >
               Learn More
@@ -106,6 +108,7 @@ const Hero = () => {
             w-full
             md:w-[80%]
             max-w-130
+            cursor-pointer
           "
         />
       </div>
@@ -132,11 +135,11 @@ const Hero = () => {
 
           <div className="font-semibold font-inter text-3.2/4 text-white flex gap-4">
 
-            <button className="bg-linear-to-r from-[#F97316] to-[#EC4899] rounded-xl px-4 py-3 w-49.5">
+            <button className="bg-linear-to-r from-[#F97316] to-[#EC4899] rounded-xl px-4 py-3 w-49.5 cursor-pointer">
               Explore Technologies
             </button>
 
-            <button className="border border-[#E5E7EB] rounded-xl px-4 py-3 text-[#374151] font-normal w-49.5">
+            <button className="border border-[#E5E7EB] rounded-xl px-4 py-3 text-[#374151] font-normal w-49.5 cursor-pointer">
               Learn More
             </button>
 
@@ -146,7 +149,7 @@ const Hero = () => {
         <img
           src={HeroImage}
           alt="HeroImage"
-          className="col-span-5"
+          className="col-span-5 cursor-pointer"
         />
 
       </div>
